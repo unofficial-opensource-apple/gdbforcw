@@ -188,7 +188,7 @@ static void
 info_mach_port_command (char *args, int from_tty)
 {
   task_t task;
-  port_t port;
+  mach_port_t port;
 
   CHECK_ARGS ("Task and port", args);
   sscanf (args, "0x%x 0x%x", &task, &port);

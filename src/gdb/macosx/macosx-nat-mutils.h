@@ -41,7 +41,7 @@ void mach_check_error (kern_return_t ret, const char *file, unsigned int line,
 void mach_warn_error (kern_return_t ret, const char *file, unsigned int line,
                       const char *func);
 
-int macosx_port_valid (port_t port);
+int macosx_port_valid (mach_port_t port);
 int macosx_task_valid (task_t task);
 int macosx_thread_valid (task_t task, thread_t thread);
 int macosx_pid_valid (int pid);
@@ -49,7 +49,7 @@ int macosx_pid_valid (int pid);
 thread_t macosx_primary_thread_of_task (task_t task);
 
 kern_return_t macosx_msg_receive (mach_msg_header_t * msgin, size_t msgsize,
-                                  unsigned long timeout, port_t port);
+                                  unsigned long timeout, mach_port_t port);
 
 int call_ptrace (int request, int pid, int arg3, int arg4);
 

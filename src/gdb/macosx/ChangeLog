@@ -1,3 +1,17 @@
+2006-05-30  Jason Molenda  (jmolenda@apple.com)
+
+        * macosx-nat-dyld.c (macosx_locate_dyld) PORT_NULL -> MACH_PORT_NULL.
+        * macosx-nat-excthread.c (macosx_exception_thread_init): Ditto.
+
+2006-04-18  Jason Molenda  (jmolenda@apple.com)
+
+        * macosx-nat-inferior-debug.c: Use mach_port_t instead of port_t.
+        * macosx-nat-inferior-debug.h: Ditto.
+        * macosx-nat-info.c: Ditto.
+        * macosx-nat-mutils.c: Ditto.
+        * macosx-nat-mutils.h: Ditto.
+        * macosx-nat-watchpoint.c: Ditto.
+
 2006-04-13  Jason Molenda  (jmolenda@apple.com)
 
 	* macosx-nat-cmds-load.c: Remove plugin support.

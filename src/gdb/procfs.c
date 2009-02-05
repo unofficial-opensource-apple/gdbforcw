@@ -3191,7 +3191,7 @@ proc_update_threads (procinfo *pi)
   if (ioctl (pi->ctl_fd, PIOCLSTATUS, prstatus) < 0)
     proc_error (pi, "update_threads (PIOCLSTATUS)", __LINE__);
 
-  /* Skip element zero, which represents the process as a whole. */
+  /* Skip elemEnt zero, which represents the process as a whole. */
   for (i = 1; i < nlwp + 1; i++)
     {
       if ((thread = create_procinfo (pi->pid, prstatus[i].pr_who)) == NULL)

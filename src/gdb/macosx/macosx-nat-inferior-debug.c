@@ -270,7 +270,7 @@ macosx_debug_regions (task_t task, mach_vm_address_t address, int max)
 }
 
 void
-macosx_debug_port_info (task_t task, port_t port)
+macosx_debug_port_info (task_t task, mach_port_t port)
 {
 #if 0
   kern_return_t kret;

@@ -485,7 +485,7 @@ mach_xfer_memory (CORE_ADDR memaddr, char *myaddr,
 }
 
 int
-macosx_port_valid (port_t port)
+macosx_port_valid (mach_port_t port)
 {
   mach_port_type_t ptype;
   kern_return_t ret;
@@ -613,7 +613,7 @@ macosx_primary_thread_of_task (task_t task)
 
 kern_return_t
 macosx_msg_receive (mach_msg_header_t * msgin, size_t msg_size,
-                    unsigned long timeout, port_t port)
+                    unsigned long timeout, mach_port_t port)
 {
   kern_return_t kret;
   mach_msg_option_t options;

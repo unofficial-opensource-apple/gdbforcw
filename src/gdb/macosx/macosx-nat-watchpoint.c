@@ -138,7 +138,7 @@ write_protect_page (int pid, CORE_ADDR page_start)
 {
   mach_vm_address_t r_start;
   mach_vm_size_t r_size;
-  port_t r_object_name;
+  mach_port_t r_object_name;
 
   vm_region_basic_info_data_t r_data;
   mach_msg_type_number_t r_info_size;

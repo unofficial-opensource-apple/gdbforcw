@@ -464,7 +464,7 @@ macosx_locate_dyld (CORE_ADDR *value, CORE_ADDR hint)
       int info_cnt = sizeof (vm_region_basic_info_data_64_t);
       mach_vm_address_t test_addr = VM_MIN_ADDRESS;
       mach_vm_size_t size = 0;
-      mach_port_t object_name = PORT_NULL;
+      mach_port_t object_name = MACH_PORT_NULL;
       task_t target_task = macosx_status->task;
 
   info_cnt = VM_REGION_BASIC_INFO_COUNT_64;
